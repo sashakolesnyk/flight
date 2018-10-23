@@ -1,0 +1,510 @@
+/* Global settings */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	/*font-size: 0;*/
+}
+
+html, body {
+	height: 100%;
+	font-family: "PF DinDisplay Pro", sans-serif;
+}
+/*Блок обратной связи - справа экрана*/
+.call_back {
+	width: 193px;
+	height: 65px;	
+	background-color: #555;
+	transform: rotate(270deg);
+	position: fixed;
+	top: 340px;
+	right: -65px;
+	text-align: center;
+}
+.call_back p {
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 65px;
+	color: #fff;	
+}
+
+header {	
+	min-height: 1020px;	
+	background-image: url(../img/header-fon.jpg);
+	background-size: cover;
+}
+
+.wrapper {
+	max-width: 1280px;	
+	padding: 0 10px;
+	height: 100%;
+	margin: 0 auto;	
+}
+
+#lang-type a {
+	color: #a7d2db;
+}
+.for_over {
+	color: #a7d2db !important;
+	text-decoration: underline;
+}
+
+/******** БЭМ *******/
+/*Блок меню*/
+.top-menu {
+	padding-top: 55px;
+}
+/*Елемент основное меню*/
+.top-menu__main-menu {
+	list-style-type: none;
+	display: flex;
+	justify-content: flex-end;
+}
+/*Елемент пункт основного меню*/
+.top-menu__main-menu-item a {
+	margin-left: 30px;	
+	text-decoration: none;
+	color: #929292;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+}
+.top-menu__main-menu-item a:hover {
+	color: #a7d2db;
+}
+/*Модификатор активного пункта основного меню*/
+.top-menu__main-menu-item_active a {
+	color: #a7d2db;
+}
+
+/*Блок под-меню*/
+.sub-menu {
+	display: none;
+	margin-top: 45px;
+	padding-right: 10px;
+}
+/*Елемент подменю*/
+.sub-menu__ul {	
+	list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+/*Елемент пункт подменю*/
+.sub-menu__item {
+	border-right: 1px solid #d9d9d9;
+	padding: 0 34px;	
+}
+.sub-menu__item:last-child {
+	border-right: none;
+	
+}
+.sub-menu__item a {
+	margin-left: 30px;	
+	text-decoration: none;
+	color: #929292;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: normal;
+	letter-spacing: 0.05em;
+	display: block;
+	text-align: left;
+}
+.sub-menu__item a:hover {
+	color: #a7d2db;
+}
+/*Елемент активного пункта подменю*/
+.sub-menu__item_active a {
+	color: #a7d2db;
+}
+
+/*Блок заголовок h1*/
+.main-title {
+	color: #555;
+	text-transform: uppercase;
+	font-size: 104px;
+	font-weight: medium;
+	line-height: 72px;
+	text-align: center;
+	margin-top: 110px;
+}
+
+/*Блок промо*/
+.promo {
+	height: auto;
+	margin-top: 70px;	
+	width: 64%;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+/*Элемент горизонтальная черта*/
+.promo__line {	
+	width: 71px;
+	height: 2px;
+	background-color: #555;
+	position: relative;
+	top: 17px;
+}
+/*Элемент горизонтальная черта*/
+.promo__text {
+	display: block;
+	padding-left: 91px;
+	color: #555;	
+	font-size: 20px;
+	font-weight: medium;
+	letter-spacing: 0.025em;
+	line-height: 30px;
+
+}
+/*Элемент ссылка*/
+.promo__reference {	
+	float: right;
+	margin-bottom: 50px;
+}
+.promo__reference span {
+	color: #a7d2db;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	line-height: 33px;
+	text-transform: uppercase;
+	text-decoration: underline;
+	margin-right: 10px;
+}
+
+/*Блок текста (описание)*/
+.description {	
+	margin: 100px 100px 125px 90px;
+	padding-top: 0px;	
+}
+
+/*Элемент текст*/
+.description__item {
+	color: #555;
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 300;
+	letter-spacing: 0.025em;
+	line-height: 33px;
+	margin-bottom: 40px;
+}
+
+/******** SECTION ADVANTAGES *******/
+.advantages {	
+	background-color: #a7d2db;
+	min-height: 400px;	
+}
+.advantages .wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	min-height: 400px;
+	flex-wrap: wrap;
+}
+/*Блок преимущества*/
+.advantage {
+	min-height: 128px;	
+	flex-grow: 1;	
+}
+
+/*Модификатор блока (костыль) для помещения всех эл-в*/
+.advantage_bigger {
+	width: 330px;
+}
+.advantage_smaller {
+	width: 270px;
+}
+/*Елемент вертикальный контейнер*/
+.advantage__vertical {
+	float: left;
+	margin-right: 15px;
+}
+/*Елемент вертикальный номер*/
+.advantage__number {
+	position: relative;
+	top: 48px;
+	left: 5px;
+	color: #fff;
+	font-size: 40px;
+	line-height: 48px;
+	font-weight: 900;
+	text-transform: uppercase;
+	transform: rotate(-90deg);
+	transform-origin: left top;	
+	display: inline-block;
+}
+/*Елемент вертикальная линия*/
+.advantage__line {
+	height: 63px;	
+	border-right: 1px solid white;
+	margin-top: 23px;
+}
+/*Елемент заголовок*/
+.advantage__title {
+	color: #555;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 36px;
+	margin-left: 15px;	
+}
+/*Елемент текст*/
+.advantage__text {
+	color: #555;
+	font-size: 21px;
+	line-height: 36px;
+	font-weight: thin;
+	margin-left: 15px;
+	
+}
+
+/******** SECTION ACTULA FLIGHTS (TABLE) *******/
+/*Блок - секция актуальные рейсы*/
+.actual-flights {
+	min-height: 1600px;
+	background-size: cover;		
+	text-align: center;
+}
+.fon-helper {
+	background-color: rgba(255,255,255, 0.92);
+}
+.actual-flights .wrapper {	
+	display: flex;
+	flex-direction: column;
+	min-height: 1600px;
+	text-align: center;
+}
+/*Елемент заголовок 3 уровня*/
+.actual-flights__h3-title {	
+	margin-top: 87px;
+	color: #555;
+	font-size: 36px;
+	line-height: 48px;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 0.6em;
+}
+/*Елемент верт. линия*/
+.actual-flights__line {
+	height: 30px;
+	width: 1px;
+	background-color: #838486;
+	margin: 20px auto;
+}
+/*Елемент заголовок 2 уровня*/
+.actual-flights__h2-title {
+	margin-bottom: 25px;
+	color: #555;
+	font-size: 64px;
+	line-height: 72px;
+	font-weight: medium;
+	text-transform: uppercase;
+	
+}
+/*Елемент стрелка*/
+.actual-flights__down-arrow {
+	display: block;
+	width: 31px;
+	height: 18px;
+	margin: 0 auto;
+	margin-bottom: 120px;
+}
+/*Елемент таблица*/
+.actual-flights__table {
+	margin: 0 auto;	 
+	border: 0;
+	border-collapse: collapse;
+}
+	/*------- настройка вида таблицы -------*/
+	.actual-flights__table td:last-child,
+	.actual-flights__table th:last-child {
+		border-right: none;
+	}
+	.actual-flights__table td,
+	.actual-flights__table th {
+		border-right: 1px solid #d7d7d7;
+		color: #555;
+		padding: 30px;
+		font-size: 21px;
+	
+	}
+
+	.actual-flights__table th {
+		text-transform: uppercase;	
+		line-height: 48px;
+		font-weight: bold;	
+		border-bottom: 1px solid #d7d7d7;	
+	}
+	.actual-flights__table td {		
+		line-height: 30px;
+		font-weight: medium;
+	}
+	.actual-flights__table td a {
+		text-transform: uppercase;
+		color: #555;
+	}
+	.actual-flights__table td a:hover {
+		color: #add4dd;
+		text-decoration: underline;
+	}
+
+/*Елемент кнопка*/
+.actual-flights__button {
+	margin: 102px auto 120px auto;
+	background-color: #c4e5ec;
+	padding: 20px auto;
+	border: 1px solid white;
+	width: 180px;
+	height: 52px;
+	color: #555;
+	font-weight: bold;
+	font-size: 13px;
+	letter-spacing: 0.2em;
+	line-height: 33px;
+	text-transform: uppercase;
+
+}
+.actual-flights__button img {
+	margin-left: 23px;
+}
+
+/******** FOOTER *******/
+/*Блок подвал*/
+.footer {
+	background-color: #1c1c1c;
+}
+.footer .wrapper {
+	min-height: 645px;	
+	text-align: center;	
+}
+/*Елемент заголовок 3 уровня*/
+.footer__h3-title {
+	padding-top: 80px;
+	color: #464646;
+	font-size: 36px;
+	line-height: 48px;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 0.6em;
+}
+/*Елемент верт. линия*/
+.footer__line {
+	height: 30px;
+	width: 1px;
+	background-color: #444;
+	margin: 20px auto;
+
+}
+/*обертка для елементов контакты*/
+.footer__contacts {	
+	margin-top: 65px;
+	/*padding: 0 40px;*/
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 125px;
+	flex-wrap: wrap;
+}
+/*Елемент обертка на 2 контакта*/
+.footer__double .footer__contacts-item {
+	margin-bottom: 45px;
+}
+
+/*Елемент контакт*/
+.footer__contacts-item {
+	margin-bottom: 45px;
+}
+.footer__contacts-item img {
+	float: left;
+}
+.footer__contacts-item img.lower {
+	position: relative;
+	top: 5px;
+}
+.footer__contacts-item .title {
+	float: left;
+	margin-left: 10px;
+	position: relative;
+	top: -10px;
+	color: #464646;
+	font-size: 18px;
+	line-height: 48px;
+	font-weight: thin;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+.footer__contacts-item .content {
+	color: #7e7e7e;
+	font-size: 36px;
+	line-height: 48px;
+	font-weight: medium;
+	clear: left;
+	text-align: left;
+}
+.footer__contacts-item .content.fsize28 {
+	font-size: 28px;
+}
+/*Елемент футер-инфо*/
+.footer__info {
+	color: #464646;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: thin;
+	
+
+}
+.footer__info_wrap {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 45px;
+}
+/*Модификатор выравнивания елемента*/
+.footer__info_left {	
+	letter-spacing: 0.05em;
+}
+/*Модификатор выравнивания елемента*/
+.footer__info_right {	
+	letter-spacing: 0.025em;
+}
+.footer__info_right img {
+	margin-left: 18px;
+}
+
+/*========= МОДАЛЬНОЕ ОКНО =========*/
+#modal-window {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+}
+#modal-window h5 {
+	font-size: 36px;
+	font-weight: bold;	
+}
+.upper {
+	text-transform: uppercase;
+}
+.modal-window__table {
+	border: 1px solid white;
+	border-collapse: collapse;
+	letter-spacing: 0.1em;
+}
+.modal-window__table th, .modal-window__table td {
+	border: 1px solid white;
+	text-align: center;
+	padding: 30px;
+}
+
+.modal-window__item {	
+	margin-bottom: 30px;
+}
+.modal-window__item a {
+	font-size: 22px;
+	color: white;
+}
